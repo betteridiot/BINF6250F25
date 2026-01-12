@@ -1,0 +1,38 @@
+---
+title: "Project01"
+author: "Marcus D Sherman"
+date: "`r Sys.Date()`"
+output:
+  github_document:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library('reticulate')
+use_python("/usr/bin/python3")
+```
+
+# Using RMarkdown as intended to create basic R references.
+
+```{r}
+r2py_object <- "first object"
+```
+
+# Using RMarkdown to implement Python code
+
+```{python}
+py2r_object = 42
+```
+
+# Using Python stuff in R and vice versa
+
+```{r}
+print(py$py2r_object)
+```
+
+```{python}
+print(r.r2py_object)
+```
+
